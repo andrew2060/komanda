@@ -14,7 +14,7 @@ define([
       var match = new RegExp("^.*(?:youtu.be\\/|v\\/|e\\/|u\\/\\w+\\/|embed\\/|v=)([^#\\&\\?]*).*").exec(url);
       if (match) {
         var id = match[1].replace(" ", "");
-        var ytVideo = $("<iframe width=\"600\" height=\"400\" src=\"https://www.youtube.com/embed/" + id + "\" frameborder=\"0\" allowfullscreen></iframe>");
+        var ytVideo = $("<iframe width=\"600\" height=\"400\" src=\"https://www.youtube.com/embed/" + id + "?html5=1\" frameborder=\"0\" allowfullscreen></iframe>");
         link.div.append(ShowMore({
           icon: "code",
           title: "Toggle Attached Video",
